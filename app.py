@@ -37,6 +37,10 @@ def get_plants():
         "total_plants": len(formatted_plants)
     }
 
+@app.route("/")
+def home():
+    return ('home is ok!')
+
 @app.route("/plants/<int:plant_id>")
 def get_specific_plant(plant_id):
     try:
